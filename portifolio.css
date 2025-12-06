@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: black; /* Define a cor de fundo preta */
+    color: white; /* Define a cor do texto branca */
+}
+
+.destaqueTitulo {
+    color: green;
+}
+.presentation {
+    margin: 10%; /* Adiciona margem ao redor do contêiner */
+    display: flex; /* Define o contêiner como em linha */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Espaça os itens igualmente */
+}
+.presentationText {
+    width: 615px; /* Define uma largura fixa para o texto */
+    display: flex; /* Define o contêiner como em coluna */
+    flex-direction: column; /* Alinha os itens em coluna */ 
+    gap: 40px; /* Adiciona espaço entre os elementos */
+}
+
+.presentationTitule {
+    font-size: 36px; /* Aumenta o tamanho da fonte do título */
+    font-family:"Krona One", sans-serif; /* Aplica a fonte Krona One ao título */;
+}
+
+.presentationContent {
+    font-size: 24px; /* Aumenta o tamanho da fonte do conteúdo */
+    margin-top: 20px; /* Adiciona espaço acima do parágrafo */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do parágrafo */
+    font-family: "Montserrat", sans-serif; /* Aplica a fonte Montserrat ao conteúdo */;
+}
+
+.buttons {
+   display: flex; /* Define o contêiner como em linha */
+    gap: 20px; /* Adiciona espaço entre os botões */
+}
+
+.buttonOne {
+    padding: 10px 20px; /* Adiciona preenchimento ao botão */
+    background-color: green; /* Define a cor de fundo do botão */
+    color: black; /* Define a cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 16px; /* Adiciona cantos arredondados ao botão */
+    font-size: 24px; /* Aumenta o tamanho da fonte do conteúdo */ 
+    font-family: "Montserrat", sans-serif; /* Aplica a fonte Montserrat ao conteúdo */;
+}
+
+.buttonTwo {
+    padding: 10px 20px; /* Adiciona preenchimento ao botão */
+    background-color: green; /* Define a cor de fundo do botão */
+    color: black; /* Define a cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 16px; /* Adiciona cantos arredondados ao botão */
+    font-weight:600; 
+    font-size: 24px; /* Aumenta o tamanho da fonte do conteúdo */   
+    font-family: "Montserrat", sans-serif; /* Aplica a fonte Montserrat ao conteúdo */;
+}
