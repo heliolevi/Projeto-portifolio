@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --color-primary: #22D4FD;
+    --color-secondary: #F6F6F6;
+    --color-background: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    background-color: var(--color-background); /* Define a cor de fundo preta */
+    color: var(--color-secondary); /* Define a cor do texto branca */
+}
+
+.Header1 {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+
+    animation: slideDown 0.8s ease forwards;
+    padding: 2% 0 0 15%; /* Adiciona margem ao redor do contêiner */
+   
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.Header__menu {
+    display: flex; /* Define o contêiner como em linha */
+    gap: 80px; /* Adiciona espaço entre os itens */
+}
+
+.Header__link {
+    position: relative;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--color-primary);
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
+
+}
+.Header__link:hover {
+    color: var(--color-secondary);
+    transition: 0.3s;
+    transform: scale(1.12); /* aumenta 10% */
+    
+}
+
+.Header__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+
+    transition: width 0.3s ease;
+}
+.Header__link:hover::after {
+    width: 100%;
+}
+
+.destaqueTitulo {
+    color: var(--color-primary);
+}
+.presentation {
+     display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 8% 15%;
+    animation: fadeUp 1s ease forwards;
+}
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.presentationText {
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentationTitule {
+    font-size: 36px; /* Aumenta o tamanho da fonte do título */
+    font-family:"Krona One", sans-serif; /* Aplica a fonte Krona One ao título */;
+}
+
+.presentationContent {
+    font-size: 24px; /* Aumenta o tamanho da fonte do conteúdo */
+    margin-top: 20px; /* Adiciona espaço acima do parágrafo */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do parágrafo */
+    font-family: "Montserrat", sans-serif; /* Aplica a fonte Montserrat ao conteúdo */;
+}
+
+.presentationContent2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6; /* 👈 melhora muito a leitura */
+    max-width: 615px;
+    text-align: left;
+    line-height: 1.7;
+    word-break: normal;
+    white-space: normal;
+}
+
+
+.buttonsSubtitulo {
+    font-family: 'crona one', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+
+}
+
+.about .presentationText {
+    max-width: 700px;
+    gap: 20px;
+}
+
+.about .presentationContent2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+
+
+.image {
+    border-radius: 16px;
+    box-shadow: 60px -16px teal;
+
+}
+
+
+.buttons {
+   display: flex; /* Define o contêiner como em linha */
+   flex-direction: column; /* Alinha os itens em coluna */
+   align-items: center; /* Alinha os itens ao centro */
+    gap: 32px; /* Adiciona espaço entre os botões */
+    justify-content: space-between; /* Espaça os itens igualmente */
+
+
+}
+
+.buttonOne {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--color-primary);
+    text-align: center;
+    width: 378px;
+    padding: 10px 20px; /* Adiciona preenchimento ao botão */
+    /*background-color: green; /* Define a cor de fundo do botão */
+    color: var(--color-secondary); /* Define a cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 8px; /* Adiciona cantos arredondados ao botão */
+    font-size: 24px; /* Aumenta o tamanho da fonte do conteúdo */ 
+    font-family: "Montserrat", sans-serif; /* Aplica a fonte Montserrat ao conteúdo */;
+}
+
+.buttonOne:hover {
+    background-color: var(--color-background); /* Altera a cor de fundo ao passar o mouse */
+    color: var(--color-primary); /* Altera a cor do texto ao passar o mouse */
+    transition: 0.3s;
+    box-shadow: var(--color-secondary);
+    transform: scale(1.1); /* aumenta 10% */
+}
+
+.baseboard{
+    padding: 24px;
+    color: var(--color-background);
+    background-color: var(--color-primary);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    animation: fadeUp 1s ease forwards; 
+}
+
+.presentationImage {
+    border-radius: 16px;
+    box-shadow: 60px -16px var(--color-secondary);
+    max-width: 400px;   /* limite saudável */
+    width: 100%;        /* responsivo */
+    height: auto;       /* mantém proporção */
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 20 20px 40px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--color-secondary);
+     
+
+}
+
+
+
+.presentationImage:hover {
+    box-shadow: 60px -16px ;
+    transition: 0.3s;
+    transform: scale(1.05); /* aumenta 5% */
+    
+}
+
+.image:hover {
+    box-shadow: 60px -16px ;
+    transition: 0.3s;
+    transform: scale(1.05); /* aumenta 5% */
+    color: var(--color-primary);
+}
+
+
+
+
+@media (max-width: 900px) {
+    .presentation {
+        flex-direction: column;
+    }
+
+    .presentationText {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .presentationImage {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .Header1 {
+        padding: 20px 8%;
+    }
+
+    .Header__menu {
+        gap: 32px;
+    }
+
+    .Header__link {
+        font-size: 20px;
+    }
+}
