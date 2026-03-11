@@ -1,0 +1,123 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color-primary: #22D4FD;
+    --color-secondary: #F6F6F6;
+    --color-background: #000000;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Krona One', sans-serif;
+}
+
+
+/* ===== MAIN ===== */
+.presentation {
+    padding: 6rem 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== CONTAINER PROJETOS ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* ===== CARD DO PROJETO ===== */
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8),
+                0 0 30px var(--color-glow);
+    border-color: rgba(34, 212, 253, 0.3);
+}
+
+/* ===== IMAGEM DO PROJETO ===== */
+.projectImage {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: #111;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== CONTEÚDO DO PROJETO ===== */
+.projectContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+/* ===== TÍTULO ===== */
+.projectContent h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: var(--font-primary);
+}
+
+/* ===== DESCRIÇÃO ===== */
+.projectContent p {
+    line-height: 1.6;
+    opacity: 0.85;
+    font-family: var(--font-secondary);
+}
+
+/* ===== TECNOLOGIAS ===== */
+.projectTech {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    letter-spacing: 0.5px;
+}
+
+/* ===== LINKS ===== */
+.projectLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    font-family: var(--font-primary);
+}
+
+.projectLinks a {
+    flex: 1;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    background: rgba(34, 212, 253, 0.05);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectLinks a:hover {
+    background-color: var(--color-primary);
+    color: #000;
+    box-shadow: 0 0 15px var(--color-glow);
+}
+

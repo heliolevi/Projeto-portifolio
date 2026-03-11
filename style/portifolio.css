@@ -4,7 +4,11 @@
 :root {
     --color-primary: #22D4FD;
     --color-secondary: #F6F6F6;
-    --color-background: #000000;
+    --color-background-dark: #0a0a0a;
+    --color-background-light: #1a1a1a;
+    --color-glow: rgba(34, 212, 253, 0.5); /* Soft cyan glow */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Krona One', sans-serif;
 }
 
 * {
@@ -14,8 +18,10 @@
 
 body {
     /* height: 100vh; */
-    background-color: var(--color-background); /* Define a cor de fundo preta */
+    background: radial-gradient(circle at top left, var(--color-background-light) 0%, var(--color-background-dark) 50%, #000 100%);
+    background-attachment: fixed;
     color: var(--color-secondary); /* Define a cor do texto branca */
+    overflow-x: hidden;
 }
 
 .Header1 {
@@ -23,8 +29,10 @@ body {
     top: 0;
     z-index: 1000;
 
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(8px);
+    background-color: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
     animation: slideDown 0.8s ease forwards;
     padding: 2% 0 0 15%; /* Adiciona margem ao redor do contêiner */
@@ -56,10 +64,12 @@ body {
 
     color: var(--color-primary);
     text-decoration: none;
-
+    transform: scale(1); /* 👈 estado base */
+    
     transition:
         transform 0.3s ease,
         color 0.3s ease;
+        
 
 
 }
@@ -90,11 +100,13 @@ body {
     color: var(--color-primary);
 }
 .presentation {
-     display: flex;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 80px;
     padding: 8% 15%;
     animation: fadeUp 1s ease forwards;
+    min-height: 80vh;
 }
 @keyframes fadeUp {
     from {
@@ -160,9 +172,18 @@ body {
 
 
 .image {
-    border-radius: 16px;
-    box-shadow: 60px -16px teal;
-
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.8),
+                -10px -10px 40px var(--color-glow);
+    border: 1px solid rgba(34, 212, 253, 0.3);
+    object-fit: cover;
+    transform: scale(1); /* 👈 estado base */
+    transition:
+        transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.5s ease;
 }
 
 
@@ -178,32 +199,47 @@ body {
 
 .buttonOne {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 16px;
-    border: 2px solid var(--color-primary);
+    border: 1px solid var(--color-primary);
     text-align: center;
     width: 378px;
-    padding: 10px 20px; /* Adiciona preenchimento ao botão */
-    /*background-color: green; /* Define a cor de fundo do botão */
+    padding: 14px 20px; /* Adiciona preenchimento ao botão */
+    background: rgba(34, 212, 253, 0.05);
+    backdrop-filter: blur(4px);
     color: var(--color-secondary); /* Define a cor do texto do botão */
     text-decoration: none; /* Remove o sublinhado do link */
-    border-radius: 8px; /* Adiciona cantos arredondados ao botão */
-    font-size: 24px; /* Aumenta o tamanho da fonte do conteúdo */ 
-    font-family: "Montserrat", sans-serif; /* Aplica a fonte Montserrat ao conteúdo */;
+    border-radius: 12px; /* Adiciona cantos arredondados ao botão */
+    font-size: 20px; /* Modernizado o tamanho */ 
+    font-weight: 600;
+    font-family: var(--font-primary); /* Aplica a fonte Montserrat ao conteúdo */;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.buttonOne img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
 }
 
 .buttonOne:hover {
-    background-color: var(--color-background); /* Altera a cor de fundo ao passar o mouse */
-    color: var(--color-primary); /* Altera a cor do texto ao passar o mouse */
-    transition: 0.3s;
-    box-shadow: var(--color-secondary);
+    background-color: var(--color-primary); /* Altera a cor de fundo ao passar o mouse */
+    color: var(--color-background-dark); /* Altera a cor do texto ao passar o mouse */
+    box-shadow: 0 0 20px var(--color-glow);
     transform: scale(1.1); /* aumenta 10% */
 }
 
 .baseboard{
     padding: 24px;
-    color: var(--color-background);
-    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    background-color: #050505;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
@@ -212,37 +248,33 @@ body {
 }
 
 .presentationImage {
-    border-radius: 16px;
-    box-shadow: 60px -16px var(--color-secondary);
-    max-width: 400px;   /* limite saudável */
+    max-width: 450px;   /* limite saudável */
     width: 100%;        /* responsivo */
     height: auto;       /* mantém proporção */
-    border-radius: 16px;
+    border-radius: 20px;
     object-fit: cover;
-    box-shadow: 20 20px 40px rgba(0, 0, 0, 0.6);
-    border: 2px solid var(--color-secondary);
-     
-
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.8),
+                -10px -10px 40px var(--color-glow);
+    border: 1px solid rgba(34, 212, 253, 0.3);
+    transform: scale(1); /* 👈 estado base */
+    transition:
+        transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.5s ease;
 }
 
 
 
-.presentationImage:hover {
-    box-shadow: 60px -16px ;
-    transition: 0.3s;
-    transform: scale(1.05); /* aumenta 5% */
-    
-}
-
+.presentationImage:hover,
 .image:hover {
-    box-shadow: 60px -16px ;
-    transition: 0.3s;
-    transform: scale(1.05); /* aumenta 5% */
-    color: var(--color-primary);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9),
+                0 0 50px var(--color-glow);
+    border-color: var(--color-primary);
 }
-
-
-
+.projectCard.featured {
+    grid-column: span 2;
+    border: 1px solid var(--primary-color);
+}
 
 @media (max-width: 900px) {
     .presentation {
