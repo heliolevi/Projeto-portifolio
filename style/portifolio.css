@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --color-primary: #22D4FD;
+    --color-secondary: #F6F6F6;
+    --color-background-dark: #0a0a0a;
+    --color-background-light: #1a1a1a;
+    --color-glow: rgba(34, 212, 253, 0.5); /* Soft cyan glow */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Krona One', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    background: radial-gradient(circle at top left, var(--color-background-light) 0%, var(--color-background-dark) 50%, #000 100%);
+    background-attachment: fixed;
+    color: var(--color-secondary); /* Define a cor do texto branca */
+    overflow-x: hidden;
+}
+
+.Header1 {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    animation: slideDown 0.8s ease forwards;
+    padding: 2% 0 0 15%; /* Adiciona margem ao redor do contêiner */
+   
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.Header__menu {
+    display: flex; /* Define o contêiner como em linha */
+    gap: 80px; /* Adiciona espaço entre os itens */
+}
+
+.Header__link {
+    position: relative;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--color-primary);
+    text-decoration: none;
+    transform: scale(1); /* 👈 estado base */
+    
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+        
+
+
+}
+.Header__link:hover {
+    color: var(--color-secondary);
+    transition: 0.3s;
+    transform: scale(1.12); /* aumenta 10% */
+    
+}
+
+.Header__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+
+    transition: width 0.3s ease;
+}
+.Header__link:hover::after {
+    width: 100%;
+}
+
+.destaqueTitulo {
+    color: var(--color-primary);
+}
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 8% 15%;
+    animation: fadeUp 1s ease forwards;
+    min-height: 80vh;
+}
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.presentationText {
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentationTitule {
+    font-size: 36px; /* Aumenta o tamanho da fonte do título */
+    font-family:"Krona One", sans-serif; /* Aplica a fonte Krona One ao título */;
+}
+
+.presentationContent {
+    font-size: 24px; /* Aumenta o tamanho da fonte do conteúdo */
+    margin-top: 20px; /* Adiciona espaço acima do parágrafo */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do parágrafo */
+    font-family: "Montserrat", sans-serif; /* Aplica a fonte Montserrat ao conteúdo */;
+}
+
+.presentationContent2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6; /* 👈 melhora muito a leitura */
+    max-width: 615px;
+    text-align: left;
+    line-height: 1.7;
+    word-break: normal;
+    white-space: normal;
+}
+
+
+.buttonsSubtitulo {
+    font-family: 'crona one', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+
+}
+
+.about .presentationText {
+    max-width: 700px;
+    gap: 20px;
+}
+
+.about .presentationContent2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+
+
+.image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.8),
+                -10px -10px 40px var(--color-glow);
+    border: 1px solid rgba(34, 212, 253, 0.3);
+    object-fit: cover;
+    transform: scale(1); /* 👈 estado base */
+    transition:
+        transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.5s ease;
+}
+
+
+.buttons {
+   display: flex; /* Define o contêiner como em linha */
+   flex-direction: column; /* Alinha os itens em coluna */
+   align-items: center; /* Alinha os itens ao centro */
+    gap: 32px; /* Adiciona espaço entre os botões */
+    justify-content: space-between; /* Espaça os itens igualmente */
+
+
+}
+
+.buttonOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border: 1px solid var(--color-primary);
+    text-align: center;
+    width: 378px;
+    padding: 14px 20px; /* Adiciona preenchimento ao botão */
+    background: rgba(34, 212, 253, 0.05);
+    backdrop-filter: blur(4px);
+    color: var(--color-secondary); /* Define a cor do texto do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 12px; /* Adiciona cantos arredondados ao botão */
+    font-size: 20px; /* Modernizado o tamanho */ 
+    font-weight: 600;
+    font-family: var(--font-primary); /* Aplica a fonte Montserrat ao conteúdo */;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.buttonOne img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.buttonOne:hover {
+    background-color: var(--color-primary); /* Altera a cor de fundo ao passar o mouse */
+    color: var(--color-background-dark); /* Altera a cor do texto ao passar o mouse */
+    box-shadow: 0 0 20px var(--color-glow);
+    transform: scale(1.1); /* aumenta 10% */
+}
+
+.baseboard{
+    padding: 24px;
+    color: var(--color-secondary);
+    background-color: #050505;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    animation: fadeUp 1s ease forwards; 
+}
+
+.presentationImage {
+    max-width: 450px;   /* limite saudável */
+    width: 100%;        /* responsivo */
+    height: auto;       /* mantém proporção */
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.8),
+                -10px -10px 40px var(--color-glow);
+    border: 1px solid rgba(34, 212, 253, 0.3);
+    transform: scale(1); /* 👈 estado base */
+    transition:
+        transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        box-shadow 0.5s ease;
+}
+
+
+
+.presentationImage:hover,
+.image:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9),
+                0 0 50px var(--color-glow);
+    border-color: var(--color-primary);
+}
+.projectCard.featured {
+    grid-column: span 2;
+    border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 900px) {
+    .presentation {
+        flex-direction: column;
+    }
+
+    .presentationText {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .presentationImage {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .Header1 {
+        padding: 20px 8%;
+    }
+
+    .Header__menu {
+        gap: 32px;
+    }
+
+    .Header__link {
+        font-size: 20px;
+    }
+}
