@@ -1,0 +1,43 @@
+/* ===== INTERACTIVE EXTRAS ===== */
+
+/* Sparkle particle trail */
+.sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    pointer-events: none;
+    z-index: 9998;
+    animation: sparkle-fade 0.6s ease forwards;
+}
+
+@keyframes sparkle-fade {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0) translateY(-20px); opacity: 0; }
+}
+
+/* Button ripple */
+.button {
+    overflow: hidden;
+    position: relative;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-anim 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-anim {
+    to { transform: scale(4); opacity: 0; }
+}
+
+/* Card tilt highlight */
+.project-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
