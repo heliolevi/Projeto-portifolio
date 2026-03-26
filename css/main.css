@@ -61,15 +61,38 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1.5rem 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     animation: slideDown 0.8s ease forwards;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    transition: transform var(--transition-standard);
+}
+
+.header__logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(34, 212, 253, 0.2);
+    transition: box-shadow var(--transition-standard);
+}
+
+.header__logo:hover {
+    transform: scale(1.05);
+}
+
+.header__logo:hover img {
+    box-shadow: 0 0 18px var(--color-glow);
 }
 
 .header__menu {
     display: flex;
     gap: 4rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .header__link {
@@ -354,10 +377,14 @@ body {
 
     .header {
         padding: 1rem 5%;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
     }
 
     .header__menu {
         gap: 1.5rem;
+        justify-content: center;
     }
 
     .presentation__content {
