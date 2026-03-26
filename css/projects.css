@@ -1,7 +1,7 @@
 /* ===== PROJECTS GRID ===== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 2.5rem;
     width: 100%;
     max-width: 1200px;
@@ -107,5 +107,17 @@
 
     .project-card__title {
         font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .project-card__title {
+        font-size: 1.1rem;
+    }
+    .project-card__tech {
+        font-size: 0.75rem;
+    }
+    .project-card__text {
+        font-size: 0.9rem;
     }
 }
