@@ -1,6 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ===========================
+       0. SCROLL REVEAL
+    =========================== */
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, i * 120);
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+
+    /* ===========================
+       0b. TYPED TEXT EFFECT (home only)
+    =========================== */
+    const typedEl = document.querySelector('.typed-text');
+    if (typedEl) {
+        const roles = ['Back-end Developer', 'API Engineer', 'Node.js Developer', 'System Builder'];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        function type() {
+            const current = roles[roleIndex];
+            if (deleting) {
+                typedEl.textContent = current.substring(0, charIndex--);
+            } else {
+                typedEl.textContent = current.substring(0, charIndex++);
+            }
+
+            if (!deleting && charIndex === current.length + 1) {
+                setTimeout(() => { deleting = true; type(); }, 1800);
+                return;
+            }
+            if (deleting && charIndex < 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                charIndex = 0;
+            }
+            setTimeout(type, deleting ? 50 : 90);
+        }
+        setTimeout(type, 800);
+    }
+
+    /* ===========================
        1. MOUSE NEON GLOW FOLLOW
     =========================== */
     const glow = document.createElement('div');

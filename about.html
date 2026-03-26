@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about Hélio Levi, a Software Engineering student and Front-end Developer focused on brand positioning and digital growth.">
+    <meta name="description" content="Learn more about Hélio Levi, a Back-end Developer specialized in REST APIs with Node.js, Express, and MongoDB.">
     <title>About Me | Hélio Levi</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/interactive.css">
 </head>
 <body>
@@ -17,28 +18,74 @@
         </nav>
     </header>
 
-    <main class="presentation presentation--about">
-        <section class="presentation__content">
-            <h1 class="presentation__title">About Me</h1>
-            <p class="presentation__text presentation__text--secondary">I'm an 18-year-old Software Engineering student (3rd semester), 
-                passionate about technology and driven by the 
-                purpose of elevating businesses through digital means. 
-                I already work in the field and understood early on that 
-                technology isn't just code: it's about positioning, 
-                authority, and growth. My focus is clear — helping 
-                companies stand out in an increasingly competitive market,
-                 using technology as a tool for expansion and 
-                 differentiation.</p>
+    <main class="about-page">
 
-            <p class="presentation__text presentation__text--secondary">
-                I noticed a major flaw in the market: 
-                brands with potential, but poorly positioned, lacking a strong identity and a strategic digital presence. I exist to solve this. I work to build modern, relevant brands that generate real value. 
-                While many think, others move forward—and in today's market, those who position themselves first lead. I didn't come to be just another one; I came to raise standards, brands, and results.
-            </p>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero__content reveal">
+                <span class="about-hero__tag">Back-end Developer</span>
+                <h1 class="about-hero__title">Building the <span class="highlight">Engine</span> behind the scenes</h1>
+                <p class="about-hero__text">
+                    I'm <strong>Hélio Levi</strong>, 18 years old, Software Engineering student (3rd semester) and Back-end Developer. 
+                    My work lives where the user never looks — in the logic, the routes, the APIs, and the data. 
+                    I build systems that <strong>work fast, scale securely, and elevate businesses</strong>.
+                </p>
+                <p class="about-hero__text">
+                    I understood early on that technology isn't just code — it's about impact. 
+                    I didn't come to be just another developer; I came to build infrastructure that drives results.
+                    While others focus on what's visible, I engineer what's <strong>unbreakable underneath</strong>.
+                </p>
+            </div>
+            <div class="about-hero__image reveal">
+                <img src="./assets/img/about-profile.jpg" alt="Hélio Levi" class="presentation__hero-img">
+            </div>
         </section>
-        <div class="presentation__hero">
-            <img src="./assets/img/about-profile.jpg" alt="Hélio Levi" class="presentation__hero-img">
-        </div>
+
+        <!-- Skills Section -->
+        <section class="skills reveal">
+            <h2 class="skills__title">Tech Stack</h2>
+            <div class="skills__grid">
+                <div class="skill-card">
+                    <span class="skill-card__icon">⚙️</span>
+                    <h3 class="skill-card__name">Node.js</h3>
+                    <p class="skill-card__desc">Asynchronous runtime for scalable server-side applications</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-card__icon">🚂</span>
+                    <h3 class="skill-card__name">Express.js</h3>
+                    <p class="skill-card__desc">Fast, minimalist web framework for building robust REST APIs</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-card__icon">🗄️</span>
+                    <h3 class="skill-card__name">MongoDB</h3>
+                    <p class="skill-card__desc">Flexible NoSQL database for modern data-driven applications</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-card__icon">🔗</span>
+                    <h3 class="skill-card__name">REST APIs</h3>
+                    <p class="skill-card__desc">Designing and building clean, secure, and well-documented APIs</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-card__icon">🤖</span>
+                    <h3 class="skill-card__name">AI Integration</h3>
+                    <p class="skill-card__desc">Connecting OpenAI and other LLMs into production-ready systems</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-card__icon">🔐</span>
+                    <h3 class="skill-card__name">Auth & Security</h3>
+                    <p class="skill-card__desc">JWT, bcrypt, middleware for secure authentication flows</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="philosophy reveal">
+            <blockquote class="philosophy__quote">
+                "I noticed a major flaw in the market: systems with potential, but poorly engineered — slow, insecure, and impossible to scale.
+                <strong> I exist to fix that.</strong>"
+            </blockquote>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -47,4 +94,3 @@
     <script src="./js/interactive.js"></script>
 </body>
 </html>
-
