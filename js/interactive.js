@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     =========================== */
     const typedEl = document.querySelector('.typed-text');
     if (typedEl) {
-        const roles = ['Back-end Developer', 'API Engineer', 'Node.js Developer', 'System Builder'];
+        const roles = ['Back-end Developer', 'Strategic Tech Consultant', 'API Engineer', 'Systems Architect'];
         let roleIndex = 0;
         let charIndex = 0;
         let deleting = false;

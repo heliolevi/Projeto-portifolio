@@ -124,6 +124,34 @@
     box-shadow: 0 0 30px rgba(34, 212, 253, 0.05);
 }
 
+/* === CONTACT CTA === */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(34, 212, 253, 0.15);
+    border-radius: 20px;
+    background: rgba(34, 212, 253, 0.03);
+}
+
+.cta__title {
+    font-family: var(--font-secondary);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.cta__text {
+    max-width: 560px;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+.cta__button {
+    width: auto;
+}
+
 /* === SCROLL REVEAL === */
 .reveal {
     opacity: 0;
