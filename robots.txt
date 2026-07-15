@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heliolevi.github.io/Projeto-portifolio/sitemap.xml

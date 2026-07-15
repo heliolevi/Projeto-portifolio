@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore projects developed by Hélio Levi, including web platforms, AI chatbots, and Python implementations.">
+    <meta name="description" content="Case studies by Hélio Levi: data-driven systems for public administration and operational efficiency, plus web platforms and AI-powered tools.">
     <title>Projects | Hélio Levi</title>
     <link rel="icon" type="image/png" href="./assets/img/logo.png">
+    <link rel="apple-touch-icon" href="./assets/img/logo.png">
+    <link rel="canonical" href="https://heliolevi.github.io/Projeto-portifolio/projects.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects | Hélio Levi">
+    <meta property="og:description" content="Case studies by Hélio Levi: data-driven systems for public administration and operational efficiency, plus web platforms and AI-powered tools.">
+    <meta property="og:image" content="https://heliolevi.github.io/Projeto-portifolio/assets/img/logo.png">
+    <meta property="og:url" content="https://heliolevi.github.io/Projeto-portifolio/projects.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Hélio Levi">
+    <meta name="twitter:description" content="Case studies by Hélio Levi: data-driven systems for public administration and operational efficiency, plus web platforms and AI-powered tools.">
+    <meta name="twitter:image" content="https://heliolevi.github.io/Projeto-portifolio/assets/img/logo.png">
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/projects.css">
     <link rel="stylesheet" href="./css/interactive.css">
@@ -23,9 +36,119 @@
     </header>
 
     <main class="presentation presentation--projects">
+
+        <div class="projects-intro reveal">
+            <span class="hero-tag">Featured Case Studies</span>
+            <h1 class="projects-intro__title">Engineering Proof, Not Just Portfolio Pieces</h1>
+            <p class="projects-intro__text">
+                Two projects that show the same engineering discipline applied to two different problems: trustworthy
+                public data, and operational efficiency.
+            </p>
+        </div>
+
+        <div class="projects-grid projects-grid--featured">
+            <article class="project-card project-card--featured project-card--case-study">
+                <div class="project-card__visual project-card__visual--weather">
+                    <span class="project-card__visual-icon">🌦️</span>
+                </div>
+                <div class="project-card__content">
+                    <span class="project-card__label">Public Sector Proof of Concept</span>
+                    <h3 class="project-card__title">São Luís Weather Watch</h3>
+                    <p class="project-card__tagline">Real-time, auditable weather data for a city that needs to act on it</p>
+
+                    <div class="case-block">
+                        <h4 class="case-block__title">The Problem</h4>
+                        <p class="case-block__text">
+                            Civil Defense and municipal decision-makers in São Luís often act on weather information that's
+                            outdated, unverified, or scattered across sources — a real risk in a region exposed to heavy
+                            rain, flooding, and heat events. When the data behind an emergency decision can't be verified,
+                            public trust erodes with it.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block__title">The Stack & Why</h4>
+                        <p class="case-block__text">
+                            <strong>Node.js + Express</strong> power a fast, reliable API layer that ingests and serves
+                            meteorological data without bottlenecks. <strong>MongoDB</strong> handles the high-frequency,
+                            semi-structured readings coming from a live weather API integration — a single source of truth
+                            instead of manual entry. Every endpoint is documented with <strong>Swagger</strong>, so the API
+                            itself becomes an audit trail, not a black box. Even <strong>PNPM</strong> was a deliberate
+                            choice — optimizing dependency management the same way I optimize every other layer.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block__title">The Strategic Value</h4>
+                        <p class="case-block__text">
+                            This is a working proof of concept for public bodies: how a Civil Defense unit, a city hall,
+                            or a political mandate can base real decisions on real-time, auditable data instead of
+                            assumption. It shows what data-driven governance looks like in practice — transparent
+                            sourcing, documented APIs, and infrastructure built to be trusted.
+                        </p>
+                    </div>
+
+                    <span class="project-card__tech">
+                        Node.js • Express • MongoDB • Swagger • Weather API Integration
+                    </span>
+                    <div class="project-card__links">
+                        <a href="https://slz-weather-six.vercel.app/" target="_blank" rel="noopener noreferrer" class="button button--small">Live Demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card project-card--featured project-card--case-study">
+                <div class="project-card__visual project-card__visual--bot">
+                    <span class="project-card__visual-icon">🤖</span>
+                </div>
+                <div class="project-card__content">
+                    <span class="project-card__label">Operational Efficiency Proof of Concept</span>
+                    <h3 class="project-card__title">Bot Task</h3>
+                    <p class="project-card__tagline">Automation built to run reliably inside a real operation, not a demo</p>
+
+                    <div class="case-block">
+                        <h4 class="case-block__title">The Problem</h4>
+                        <p class="case-block__text">
+                            Teams — from small businesses to political offices — lose hours every week to repetitive
+                            manual work: scheduling, follow-ups, status tracking, routine communication. That time isn't
+                            just a cost, it's capacity a lean team can't afford to lose.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block__title">The Stack & Why</h4>
+                        <p class="case-block__text">
+                            <strong>Java + Spring Boot</strong> — the market standard for enterprise-grade robustness and
+                            security — a deliberate choice for a tool meant to run unattended in the background of an
+                            operation, not a quick script. It's deployed on <strong>Google Cloud</strong> for the
+                            stability, high availability, and enterprise-level security that automation touching real
+                            workflows requires.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block__title">The Strategic Value</h4>
+                        <p class="case-block__text">
+                            Bot Task proves a simple point with real code: operational efficiency is an engineering
+                            outcome, not a slogan. For a political mandate or a lean public office, automation like this
+                            is the difference between staff spending time on strategy versus spending it on repetitive
+                            administrative work — a direct, measurable productivity gain.
+                        </p>
+                    </div>
+
+                    <span class="project-card__tech">
+                        Java • Spring Boot • Google Cloud
+                    </span>
+                    <div class="project-card__links">
+                        <a href="https://github.com/heliolevi/bot_task" target="_blank" rel="noopener noreferrer" class="button button--small">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="projects-intro reveal">
+            <h2 class="projects-intro__title">More Projects</h2>
+        </div>
+
         <div class="projects-grid">
             <article class="project-card project-card--featured">
-                <img src="./assets/img/barbershop-ai.png" alt="Barbershop AI Assistant Screenshot" class="project-card__image">
+                <img src="./assets/img/barbershop-ai.png" alt="Barbershop AI Assistant Screenshot" class="project-card__image" loading="lazy">
                 <div class="project-card__content">
                     <h3 class="project-card__title">Barbershop AI Assistant</h3>
                     <p class="project-card__text">
@@ -35,13 +158,13 @@
                         JavaScript • OpenAI • Node.js
                     </span>
                     <div class="project-card__links">
-                        <a href="https://github.com/heliolevi/assistencia-ia" target="_blank" class="button button--small">GitHub</a>
+                        <a href="https://github.com/heliolevi/assistencia-ia" target="_blank" rel="noopener noreferrer" class="button button--small">GitHub</a>
                     </div>
                 </div>
             </article>
 
             <article class="project-card">
-                <img src="./assets/img/payments-api.png" alt="Payments API" class="project-card__image">
+                <img src="./assets/img/payments-api.png" alt="Payments API" class="project-card__image" loading="lazy">
                 <div class="project-card__content">
                     <h3 class="project-card__title">Payments API</h3>
                     <p class="project-card__text">
@@ -51,13 +174,13 @@
                         Node.js • Express • MongoDB
                     </span>
                     <div class="project-card__links">
-                        <a href="https://github.com/heliolevi/API-pagamentos" target="_blank" class="button button--small">GitHub</a>
+                        <a href="https://github.com/heliolevi/API-pagamentos" target="_blank" rel="noopener noreferrer" class="button button--small">GitHub</a>
                     </div>
                 </div>
             </article>
 
             <article class="project-card">
-                <img src="./assets/img/payments-ai.png" alt="Payments AI Dashboard" class="project-card__image">
+                <img src="./assets/img/payments-ai.png" alt="Payments AI Dashboard" class="project-card__image" loading="lazy">
                 <div class="project-card__content">
                     <h3 class="project-card__title">Payments AI</h3>
                     <p class="project-card__text">
@@ -67,7 +190,7 @@
                         JavaScript • NODE.JS • Data Analytics • Express
                     </span>
                     <div class="project-card__links">
-                        <a href="https://github.com/heliolevi/financas-ai" target="_blank" class="button button--small">GitHub</a>
+                        <a href="https://github.com/heliolevi/financas-ai" target="_blank" rel="noopener noreferrer" class="button button--small">GitHub</a>
                     </div>
                 </div>
             </article>
