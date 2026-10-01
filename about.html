@@ -3,160 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hélio Levi — Back-end Developer & Strategic Technology Consultant engineering auditable, data-driven systems for institutions, businesses, and public administration.">
-    <title>About Me | Hélio Levi</title>
+    <meta name="description" content="About Hélio Levi: Back-end Developer and Strategic Technology Consultant focused on public administration, operational efficiency and data integrity.">
+    <meta name="theme-color" content="#05070a">
+    <title>About | Hélio Levi</title>
     <link rel="icon" type="image/png" href="./assets/img/logo.png">
     <link rel="apple-touch-icon" href="./assets/img/logo.png">
     <link rel="canonical" href="https://heliolevi.github.io/Projeto-portifolio/about.html">
 
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="About Me | Hélio Levi">
-    <meta property="og:description" content="Back-end Developer & Strategic Technology Consultant engineering auditable, data-driven systems for institutions, businesses, and public administration.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About | Hélio Levi">
+    <meta property="og:description" content="Back-end Developer and Strategic Technology Consultant focused on public administration, operational efficiency and data integrity.">
     <meta property="og:image" content="https://heliolevi.github.io/Projeto-portifolio/assets/img/about-profile.jpg">
     <meta property="og:url" content="https://heliolevi.github.io/Projeto-portifolio/about.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Me | Hélio Levi">
-    <meta name="twitter:description" content="Back-end Developer & Strategic Technology Consultant engineering auditable, data-driven systems for institutions, businesses, and public administration.">
+    <meta name="twitter:title" content="About | Hélio Levi">
+    <meta name="twitter:description" content="Back-end Developer and Strategic Technology Consultant focused on public administration, operational efficiency and data integrity.">
     <meta name="twitter:image" content="https://heliolevi.github.io/Projeto-portifolio/assets/img/about-profile.jpg">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Manrope:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/interactive.css">
+    <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__ready)document.documentElement.classList.remove('js');},4000);</script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="particles" aria-hidden="true"></div>
+
     <header class="header">
-        <a href="index.html" class="header__logo">
-            <img src="./assets/img/logo.png" alt="HL Logo">
+        <a href="index.html" class="header__logo" aria-label="Hélio Levi — home">
+            <img src="./assets/img/logo.png" alt="HL" width="38" height="38">
         </a>
-        <nav class="header__menu">
+        <nav class="header__menu" aria-label="Main">
             <a class="header__link" href="index.html">Home</a>
-            <a class="header__link" href="about.html">About me</a>
+            <a class="header__link" href="about.html" aria-current="page">About</a>
             <a class="header__link" href="projects.html">Projects</a>
+            <a class="header__cta" href="index.html#contact">Contact</a>
         </nav>
     </header>
 
-    <main class="about-page">
-
-        <!-- Hero Section -->
-        <section class="about-hero">
-            <div class="about-hero__content reveal">
-                <span class="about-hero__tag">Back-end Developer & Strategic Tech Consultant</span>
-                <h1 class="about-hero__title">Where Engineering Meets <span class="highlight">Real Impact</span></h1>
-                <p class="about-hero__text">
-                    I'm <strong>Hélio Levi</strong>, 18 years old, Software Engineering student (3rd semester). I build the infrastructure
-                    institutions run on — REST APIs, cloud systems, and data pipelines engineered with <strong>Java, Node.js, AWS, and PostgreSQL</strong>.
-                    But the code is never the point. The point is what it makes possible.
-                </p>
-                <p class="about-hero__text">
-                    I got into engineering because I kept seeing the same gap: organizations with real potential, running on systems that were
-                    slow, opaque, or impossible to trust. That gap is where I work. I design back-end architecture the way a strategist designs
-                    a plan — for accuracy, for scale, and for <strong>accountability</strong>, because a system nobody can audit is a system
-                    nobody should rely on.
-                </p>
-                <p class="about-hero__text">
-                    That's the lens I bring to public administration and political mandates in Maranhão: technology isn't a support function
-                    for governance, it's the infrastructure governance runs on. I don't sell code — I build the layer that makes decisions
-                    faster, data trustworthy, and operations lean enough to actually scale.
-                </p>
-            </div>
-            <div class="about-hero__image reveal">
-                <img src="./assets/img/about-profile.jpg" alt="Hélio Levi" class="presentation__hero-img">
+    <main id="main" class="page">
+        <section class="page-hero">
+            <div class="container">
+                <span class="kicker" data-enter>Back-end Developer &amp; Strategic Tech Consultant</span>
+                <h1 class="page-hero__title" data-enter>Where engineering meets <em>real impact</em>.</h1>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills reveal">
-            <h2 class="skills__title">Tech Stack</h2>
-            <div class="skills__grid">
-                <div class="skill-card">
-                    <span class="skill-card__icon">☕</span>
-                    <h3 class="skill-card__name">Java & Spring Boot</h3>
-                    <p class="skill-card__desc">Market-standard framework for robust, secure, enterprise-grade systems</p>
+        <section class="section" style="padding-top:2rem">
+            <div class="container about-grid">
+                <div class="prose" data-enter>
+                    <p>I'm <strong>Hélio Levi</strong>, 18 years old, a Software Engineering student (3rd semester). I build the infrastructure institutions run on — REST APIs, cloud systems and data pipelines engineered with <strong>TypeScript, NestJS, Next.js, AWS and PostgreSQL</strong>. But the code is never the point. The point is what it makes possible.</p>
+                    <p>I got into engineering because I kept seeing the same gap: organizations with real potential, running on systems that were slow, opaque, or impossible to trust. That gap is where I work. I design back-end architecture the way a strategist designs a plan — for accuracy, for scale, and for <strong>accountability</strong>, because a system nobody can audit is a system nobody should rely on.</p>
+                    <p>That's the lens I bring to public administration and political mandates in Maranhão: technology isn't a support function for governance, it's the infrastructure governance runs on. I don't sell code — I build the layer that makes decisions faster, data trustworthy, and operations lean enough to actually scale.</p>
+                    <div class="button-row">
+                        <a class="button button--primary" href="projects.html">See the projects</a>
+                        <a class="button" href="mailto:hlevi200730@gmail.com">Send an email</a>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">⚙️</span>
-                    <h3 class="skill-card__name">Node.js</h3>
-                    <p class="skill-card__desc">Asynchronous runtime for scalable server-side applications</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">☁️</span>
-                    <h3 class="skill-card__name">AWS & Cloud</h3>
-                    <p class="skill-card__desc">Production infrastructure built for high availability and real scale</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">🐘</span>
-                    <h3 class="skill-card__name">PostgreSQL</h3>
-                    <p class="skill-card__desc">Relational database built for data integrity and auditable records</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">🗄️</span>
-                    <h3 class="skill-card__name">MongoDB</h3>
-                    <p class="skill-card__desc">Flexible NoSQL database for modern data-driven applications</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">🔗</span>
-                    <h3 class="skill-card__name">REST APIs</h3>
-                    <p class="skill-card__desc">Designing and building clean, secure, and well-documented APIs</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">🤖</span>
-                    <h3 class="skill-card__name">AI Integration</h3>
-                    <p class="skill-card__desc">Connecting OpenAI and other LLMs into production-ready systems</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">🔐</span>
-                    <h3 class="skill-card__name">Auth & Security</h3>
-                    <p class="skill-card__desc">JWT, bcrypt, middleware for secure authentication flows</p>
+                <figure class="portrait" data-enter>
+                    <img src="./assets/img/about-profile.jpg" alt="Portrait of Hélio Levi" width="800" height="1000">
+                </figure>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top:0">
+            <div class="container">
+                <header class="section__head" data-enter>
+                    <h2 class="section__title">Tech stack</h2>
+                </header>
+                <div class="stack-list" data-enter>
+                    <div class="stack-list__row"><span class="stack-list__name">TypeScript &amp; NestJS</span><span class="stack-list__desc">Typed, modular back-end architecture for secure, maintainable, enterprise-grade systems.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">Next.js</span><span class="stack-list__desc">React framework for fast, SEO-friendly interfaces on top of the same typed APIs.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">Node.js</span><span class="stack-list__desc">Asynchronous runtime for scalable server-side applications.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">AWS &amp; Cloud</span><span class="stack-list__desc">Production infrastructure built for high availability and real scale.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">PostgreSQL</span><span class="stack-list__desc">Relational database built for data integrity and auditable records.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">MongoDB</span><span class="stack-list__desc">Flexible NoSQL database for modern data-driven applications.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">REST APIs</span><span class="stack-list__desc">Clean, secure and well-documented APIs.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">AI Integration</span><span class="stack-list__desc">OpenAI and other LLMs connected into production-ready systems.</span></div>
+                    <div class="stack-list__row"><span class="stack-list__name">Auth &amp; Security</span><span class="stack-list__desc">JWT, bcrypt and middleware for secure authentication flows.</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- Strategic Focus Section -->
-        <section class="skills reveal">
-            <h2 class="skills__title">Where I Create the Most Value</h2>
-            <div class="skills__grid">
-                <div class="skill-card">
-                    <span class="skill-card__icon">🏛️</span>
-                    <h3 class="skill-card__name">Public Administration & Political Mandates</h3>
-                    <p class="skill-card__desc">In Maranhão and beyond, I help mandates and public institutions replace guesswork with auditable, real-time data systems</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">⚡</span>
-                    <h3 class="skill-card__name">Operational Efficiency</h3>
-                    <p class="skill-card__desc">Automation that removes repetitive manual work, giving lean teams back the hours to focus on strategy</p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-card__icon">🔍</span>
-                    <h3 class="skill-card__name">Data Integrity & Auditability</h3>
-                    <p class="skill-card__desc">Systems designed so every decision can be traced back to a documented, trustworthy source of data</p>
+        <section class="manifesto">
+            <div class="container">
+                <header class="section__head" data-enter>
+                    <h2 class="section__title">Where I create the most value</h2>
+                </header>
+                <div class="manifesto__areas" style="margin-top:0;border-top:0">
+                    <div class="area" data-enter>
+                        <h3 class="area__title">Public administration &amp; political mandates</h3>
+                        <p class="area__text">In Maranhão and beyond, I help mandates and public institutions replace guesswork with auditable, real-time data systems.</p>
+                    </div>
+                    <div class="area" data-enter>
+                        <h3 class="area__title">Operational efficiency</h3>
+                        <p class="area__text">Automation that removes repetitive manual work, giving lean teams back the hours to focus on strategy.</p>
+                    </div>
+                    <div class="area" data-enter>
+                        <h3 class="area__title">Data integrity &amp; auditability</h3>
+                        <p class="area__text">Systems designed so every decision can be traced back to a documented, trustworthy source of data.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Philosophy Section -->
-        <section class="philosophy reveal">
-            <blockquote class="philosophy__quote">
-                "I noticed the same flaw in companies and public institutions alike: systems with real potential, running on infrastructure
-                that's slow, opaque, or impossible to trust.
-                <strong> I exist to fix that — one auditable, well-engineered system at a time.</strong>"
-            </blockquote>
+        <section class="manifesto">
+            <div class="container">
+                <p class="manifesto__text" data-words>I noticed the same flaw in companies and public institutions alike: systems with real potential, running on infrastructure that's slow, opaque, or impossible to trust. I exist to fix that — one auditable, well-engineered system at a time.</p>
+            </div>
         </section>
 
-        <!-- Contact CTA -->
-        <section class="cta reveal">
-            <h2 class="cta__title">Let's Build Something That Matters</h2>
-            <p class="cta__text">
-                Open to back-end engineering and strategic technology consulting work — including public
-                administration and political mandates in Maranhão.
-            </p>
-            <a class="button cta__button" href="mailto:hlevi200730@gmail.com">✉️ hlevi200730@gmail.com</a>
+        <section class="contact">
+            <div class="container">
+                <h2 class="contact__title" data-enter>Let's build something that matters.</h2>
+                <a class="contact__mail" href="mailto:hlevi200730@gmail.com" data-enter>hlevi200730@gmail.com</a>
+                <p class="contact__note" data-enter>Open to back-end engineering and strategic technology consulting — including public administration and political mandates in Maranhão.</p>
+            </div>
         </section>
-
     </main>
 
     <footer class="footer">
-        <p>© 2025 Developed by Hélio Levi. All rights reserved.</p>
+        <div class="container footer__inner">
+            <p>© 2026 Hélio Levi. All rights reserved.</p>
+            <nav class="footer__links" aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a></nav>
+        </div>
     </footer>
-    <script src="./js/interactive.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+    <script src="./js/app.js" defer></script>
 </body>
 </html>
