@@ -2,29 +2,35 @@
 
 Este é o repositório do meu portfólio pessoal. O objetivo deste projeto é apresentar meu trabalho como **Back-end Developer e Consultor Tecnológico Estratégico**, conectando capacidade técnica a soluções reais de gestão, eficiência operacional e transparência de dados — com foco especial em projetos para administração pública e mandatos políticos no Maranhão.
 
-## 🚀 O que foi feito neste projeto?
+## 🚀 O que tem neste projeto
 
-Este projeto consiste em um site responsivo e moderno com múltiplas páginas para estruturar minha presença digital:
+Site de múltiplas páginas, escuro, responsivo (até 320px) e animado:
 
-- **Página Inicial (`index.html`)**: Apresentação focada em quem eu sou, a stack técnica (Java, Node.js, AWS, PostgreSQL) e o objetivo de transformar engenharia de software em impacto real para negócios e instituições.
-- **Página 'About Me' (`about.html`)**: Pitch expandido sobre minha trajetória, stack técnica completa e o foco estratégico do meu trabalho — administração pública, eficiência operacional e integridade de dados.
-- **Página de Projetos (`projects.html`)**: Estudos de caso completos (problema resolvido, stack técnica e valor estratégico) dos meus dois projetos principais, além de outros projetos desenvolvidos.
-- **Estilização e Layout (`css/`)**: Design system dark/neon com CSS nativo, animações de scroll reveal, efeitos interativos (glow de cursor, tilt 3D nos cards) e responsividade completa (até 320px).
+- **Home (`index.html`)**: página longa com hero (cubo 3D interativo da stack), projetos em destaque, "toolbox" com scroll horizontal fixado, manifesto que acende palavra por palavra, mais projetos e contato.
+- **About (`about.html`)**: trajetória, stack e foco estratégico.
+- **Projects (`projects.html`)**: estudos de caso completos, incluindo o **IT-WORKS · Caça ao QR** (gamificação do evento da Escola de Tecnologia UNDB).
+- **`css/main.css`**: um único CSS com tokens, layout e componentes.
+- **`js/app.js`**: todas as animações; cada efeito degrada sem quebrar a página (sem JS, sem CDN ou com `prefers-reduced-motion`).
+
+## 🎬 Bibliotecas (todas via CDN)
+
+| Biblioteca | Uso |
+|---|---|
+| **Lenis** | Rolagem suave na página inteira |
+| **GSAP + ScrollTrigger** | Pin + scroll horizontal, parallax, scrub do manifesto, hero que recua |
+| **Anime.js** | Partículas flutuantes ao fundo |
+| **Three.js** | Cubo 3D giratório e arrastável (carregado por último) |
+| **Motion** | Animações de entrada dos elementos |
 
 ## 🧩 Projetos em destaque
 
-- **[São Luís Weather Watch](https://slz-weather-six.vercel.app/)** — Sistema de monitoramento climático em tempo real (Node.js, Express, MongoDB, Swagger, integração com API meteorológica), prova de conceito para gestão pública baseada em dados auditáveis.
-- **[Bot Task](https://github.com/heliolevi/bot_task)** — Automação de tarefas operacionais (Java, Spring Boot, Google Cloud), prova de competência em eficiência operacional para times enxutos.
-
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5 / CSS3**: Estruturação semântica, estilização e responsividade.
-- **JavaScript**: Interatividade (scroll reveal, efeitos de cursor, tilt nos cards de projeto).
-- **Stack de back-end apresentada**: Java, Spring Boot, Node.js, Express, PostgreSQL, MongoDB, AWS, Google Cloud.
+- **[IT-WORKS · Caça ao QR](https://itworks-undb.vercel.app)** — gamificação do evento IT-WORKS (Escola de Tecnologia UNDB, 30/09 a 02/10).
+- **[São Luís Weather Watch](https://slz-weather-six.vercel.app/)** — monitoramento climático em tempo real (Node.js, Express, MongoDB, Swagger).
+- **[Bot Task](https://github.com/heliolevi/bot_task)** — automação operacional (Java, Spring Boot, Google Cloud).
 
 ## ⚙️ Como executar
 
 Por ser um projeto puramente construído com HTML, CSS e JavaScript estático, basta baixar ou clonar o repositório e abrir o arquivo `index.html` em qualquer navegador web de sua preferência.
 
 ---
-*© 2025 Desenvolvido por Hélio Levi. Todos os direitos reservados.*
+*© 2026 Desenvolvido por Hélio Levi. Todos os direitos reservados.*
