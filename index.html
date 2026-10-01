@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Hélio Levi, Back-end Developer & Strategic Technology Consultant, engineering data-driven systems with Java, Node.js, AWS, and PostgreSQL.">
+    <meta name="description" content="Portfolio of Hélio Levi, Back-end Developer & Strategic Technology Consultant, engineering data-driven systems with TypeScript, NestJS, Next.js, AWS, and PostgreSQL.">
+    <meta name="theme-color" content="#05070a">
     <title>Hélio Levi | Back-end Developer & Strategic Tech Consultant</title>
     <link rel="icon" type="image/png" href="./assets/img/logo.png">
     <link rel="apple-touch-icon" href="./assets/img/logo.png">
@@ -11,80 +12,283 @@
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hélio Levi | Back-end Developer & Strategic Tech Consultant">
-    <meta property="og:description" content="Back-end Developer & Strategic Technology Consultant engineering data-driven systems with Java, Node.js, AWS, and PostgreSQL.">
+    <meta property="og:description" content="Back-end Developer & Strategic Technology Consultant engineering data-driven systems with TypeScript, NestJS, Next.js, AWS, and PostgreSQL.">
     <meta property="og:image" content="https://heliolevi.github.io/Projeto-portifolio/assets/img/profile.png">
     <meta property="og:url" content="https://heliolevi.github.io/Projeto-portifolio/index.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hélio Levi | Back-end Developer & Strategic Tech Consultant">
-    <meta name="twitter:description" content="Back-end Developer & Strategic Technology Consultant engineering data-driven systems with Java, Node.js, AWS, and PostgreSQL.">
+    <meta name="twitter:description" content="Back-end Developer & Strategic Technology Consultant engineering data-driven systems with TypeScript, NestJS, Next.js, AWS, and PostgreSQL.">
     <meta name="twitter:image" content="https://heliolevi.github.io/Projeto-portifolio/assets/img/profile.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Manrope:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/interactive.css">
+    <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__ready)document.documentElement.classList.remove('js');},4000);</script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="particles" aria-hidden="true"></div>
+
     <header class="header">
-        <a href="index.html" class="header__logo">
-            <img src="./assets/img/logo.png" alt="HL Logo">
+        <a href="index.html" class="header__logo" aria-label="Hélio Levi — home">
+            <img src="./assets/img/logo.png" alt="HL" width="38" height="38">
         </a>
-        <nav class="header__menu">
-            <a class="header__link" href="index.html">Home</a>
-            <a class="header__link" href="about.html">About me</a>
+        <nav class="header__menu" aria-label="Main">
+            <a class="header__link" href="index.html" aria-current="page">Home</a>
+            <a class="header__link" href="about.html">About</a>
             <a class="header__link" href="projects.html">Projects</a>
+            <a class="header__cta" href="#contact">Contact</a>
         </nav>
     </header>
 
-    <main class="presentation">
-        <section class="presentation__content reveal">
-            <span class="hero-tag">Open to opportunities</span>
-            <h1 class="presentation__title">
-                Hello, I'm <strong class="presentation__title--highlight">Hélio Levi</strong><br>
-                <span class="typed-wrapper">I'm a <span class="typed-text"></span><span class="typed-cursor">|</span></span>
-            </h1>
-            <p class="presentation__text">
-                I build the <strong>infrastructure institutions run on</strong> — scalable REST APIs, cloud systems,
-                and data pipelines engineered with Java, Node.js, AWS, and PostgreSQL.
-                From fintech to public administration, I turn engineering discipline into real-world impact.
-            </p>
+    <main id="main" class="page">
 
-            <!-- Tech badges -->
-            <div class="hero-badges">
-                <span class="badge">Java</span>
-                <span class="badge">Node.js</span>
-                <span class="badge">AWS</span>
-                <span class="badge">PostgreSQL</span>
-                <span class="badge">REST API</span>
-                <span class="badge">MongoDB</span>
+        <!-- HERO -->
+        <section class="hero" id="top">
+            <div class="container hero__grid">
+                <div class="hero__copy">
+                    <span class="kicker" data-enter>Open to opportunities</span>
+                    <h1 class="hero__title" aria-label="I build the infrastructure institutions run on.">
+                        <span class="line" data-enter>I build the</span>
+                        <span class="line" data-enter><em>infrastructure</em></span>
+                        <span class="line" data-enter>institutions run on.</span>
+                    </h1>
+                    <p class="hero__text" data-enter>
+                        I'm <strong>Hélio Levi</strong>, a back-end developer and strategic tech consultant. Scalable REST APIs,
+                        cloud systems and data pipelines with <strong>TypeScript, NestJS, Next.js, AWS and PostgreSQL</strong> — from fintech to
+                        public administration.
+                    </p>
+                    <div class="button-row" data-enter>
+                        <a class="button button--primary" href="#work">
+                            View selected work
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+                        </a>
+                        <a class="button" href="mailto:hlevi200730@gmail.com">Send an email</a>
+                    </div>
+                    <p class="hero__roles" data-enter>
+                        <span>Back-end Developer</span><span>API Engineer</span><span>Systems Architect</span>
+                    </p>
+                </div>
+
+                <div class="cube-stage" data-enter>
+                    <div class="cube-stage__glow" aria-hidden="true"></div>
+                    <canvas id="cube-canvas" role="img" aria-label="Interactive 3D cube showing my stack: TypeScript, Node.js, AWS, PostgreSQL, MongoDB and REST API. Drag to rotate."></canvas>
+                    <div class="cube-fallback" aria-hidden="true"><img src="./assets/img/logo.png" alt=""></div>
+                    <p class="cube-stage__hint">drag to rotate · my stack, six faces</p>
+                </div>
             </div>
-            
-            <div class="presentation__social">
-                <h2 class="presentation__social-title">Find me on</h2>
-                <a class="button" href="mailto:hlevi200730@gmail.com">
-                    ✉️ Email
-                </a>
-                <a class="button" href="https://www.instagram.com/helio_levi/" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/instagram.png" alt="Instagram">
-                    Instagram
-                </a>
-                <a class="button" href="https://github.com/heliolevi" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/github.png" alt="Github">
-                    Github
-                </a>
-                <a class="button" href="https://www.linkedin.com/in/hélio-levi-morias-vieira-472918347/" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/linkedin.png" alt="Linkedin">
-                    Linkedin
-                </a>
+            <p class="hero__scroll" aria-hidden="true">scroll</p>
+        </section>
+
+        <!-- SELECTED WORK -->
+        <section class="section" id="work">
+            <div class="container">
+                <header class="section__head" data-enter>
+                    <h2 class="section__title">Selected work</h2>
+                    <p class="section__lead">Three systems, one discipline: software that people can trust, audit and keep running.</p>
+                </header>
+
+                <div class="work">
+                    <!-- itWorks -->
+                    <article class="work-item">
+                        <div class="work-item__visual" data-enter>
+                            <div class="frame" data-tilt>
+                                <div class="frame__bar">
+                                    <span class="frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                    <span class="frame__url">itworks-undb.vercel.app</span>
+                                </div>
+                                <div class="frame__body">
+                                    <img src="./assets/img/itworks.jpg" alt="IT-WORKS landing screen: pixel-art planet, event title and sign-in form" width="800" height="600" loading="lazy" data-parallax>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-item__copy" data-enter>
+                            <p class="work-item__label">Event gamification <span class="live-badge">LIVE · SEP 30 – OCT 2</span></p>
+                            <h3 class="work-item__title">IT-WORKS · QR Hunt</h3>
+                            <p class="work-item__tagline">A game that turns a three-day tech event into a hunt.</p>
+                            <p class="work-item__text">
+                                Built for IT-WORKS, the technology event at Escola de Tecnologia UNDB. Attendees create an
+                                account, sign in and play a QR-code hunt across the event — a gamified layer that gives people
+                                a reason to explore every corner of it.
+                            </p>
+                            <div class="tag-list"><span class="tag">Gamification</span><span class="tag">QR Code</span><span class="tag">Auth</span><span class="tag">Web app</span></div>
+                            <div class="button-row">
+                                <a class="button button--primary button--small" href="https://itworks-undb.vercel.app" target="_blank" rel="noopener noreferrer">
+                                    Open live project
+                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Weather Watch -->
+                    <article class="work-item">
+                        <div class="work-item__visual" data-enter>
+                            <div class="frame" data-tilt>
+                                <div class="frame__bar">
+                                    <span class="frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                    <span class="frame__url">GET /api/weather/current</span>
+                                </div>
+                                <div class="panel__body" aria-hidden="true"><span class="dim">// illustrative response</span><br>{<br>&nbsp;&nbsp;<span class="k">"city"</span>: <span class="s">"São Luís"</span>,<br>&nbsp;&nbsp;<span class="k">"source"</span>: <span class="s">"weather-api"</span>,<br>&nbsp;&nbsp;<span class="k">"temperature"</span>: <span class="n">31.4</span>,<br>&nbsp;&nbsp;<span class="k">"rain_mm_1h"</span>: <span class="n">12.8</span>,<br>&nbsp;&nbsp;<span class="k">"collectedAt"</span>: <span class="s">"2026-01-14T15:02:00Z"</span>,<br>&nbsp;&nbsp;<span class="k">"auditable"</span>: <span class="ok">true</span><br>}</div>
+                            </div>
+                        </div>
+                        <div class="work-item__copy" data-enter>
+                            <p class="work-item__label">Public sector proof of concept</p>
+                            <h3 class="work-item__title">São Luís Weather Watch</h3>
+                            <p class="work-item__tagline">Real-time, auditable weather data for a city that needs to act on it.</p>
+                            <p class="work-item__text">
+                                A working proof of concept for Civil Defense and city hall: a documented API that ingests live
+                                meteorological data into a single source of truth, so emergency decisions rest on data anyone can verify.
+                            </p>
+                            <div class="tag-list"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Swagger</span></div>
+                            <div class="button-row">
+                                <a class="button button--small" href="https://slz-weather-six.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+                                <a class="button button--small" href="projects.html#weather">Case study</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Bot Task -->
+                    <article class="work-item">
+                        <div class="work-item__visual" data-enter>
+                            <div class="frame" data-tilt>
+                                <div class="frame__bar">
+                                    <span class="frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                    <span class="frame__url">bot-task · job log</span>
+                                </div>
+                                <div class="panel__body" aria-hidden="true"><span class="dim"># illustrative log</span><br><span class="dim">09:00:01</span> <span class="ok">OK</span>&nbsp; schedule.sync<br><span class="dim">09:00:04</span> <span class="ok">OK</span>&nbsp; followups.dispatch<br><span class="dim">09:00:09</span> <span class="ok">OK</span>&nbsp; status.report<br><span class="dim">09:15:00</span> <span class="ok">OK</span>&nbsp; reminders.send<br><span class="dim">09:30:00</span> <span class="ok">OK</span>&nbsp; schedule.sync<br><span class="dim">09:30:03</span> <span class="k">··</span> next run in 30 min</div>
+                            </div>
+                        </div>
+                        <div class="work-item__copy" data-enter>
+                            <p class="work-item__label">Operational efficiency proof of concept</p>
+                            <h3 class="work-item__title">Bot Task</h3>
+                            <p class="work-item__tagline">Automation built to run inside a real operation, not a demo.</p>
+                            <p class="work-item__text">
+                                Repetitive scheduling, follow-ups and status tracking handled in the background, so a lean team
+                                spends its hours on strategy. Java and Spring Boot on Google Cloud, chosen for stability.
+                            </p>
+                            <div class="tag-list"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Google Cloud</span></div>
+                            <div class="button-row">
+                                <a class="button button--small" href="https://github.com/heliolevi/bot_task" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a class="button button--small" href="projects.html#bot-task">Case study</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <div class="presentation__hero reveal">
-            <img class="presentation__hero-img" src="./assets/img/profile.png" alt="Hélio Levi">
-        </div>
+        <!-- STACK (horizontal scroll) -->
+        <section class="stack" id="stack">
+            <div class="container stack__head" data-enter>
+                <h2 class="section__title">The toolbox</h2>
+                <p class="section__lead">What I reach for when a system has to be fast, secure and easy to audit.</p>
+            </div>
+            <div class="stack__pin">
+                <div class="stack__track">
+                    <article class="stack-item"><div><p class="stack-item__type">Language · Framework</p><h3 class="stack-item__name">TypeScript &amp; NestJS</h3></div><p class="stack-item__desc">Typed, modular back-end architecture for secure, maintainable, enterprise-grade systems.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">Front-end · Full-stack</p><h3 class="stack-item__name">Next.js</h3></div><p class="stack-item__desc">React framework for fast, SEO-friendly interfaces on top of the same typed APIs.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">Runtime</p><h3 class="stack-item__name">Node.js</h3></div><p class="stack-item__desc">Asynchronous runtime for scalable server-side applications.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">Cloud</p><h3 class="stack-item__name">AWS &amp; Google Cloud</h3></div><p class="stack-item__desc">Production infrastructure built for high availability and real scale.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">Relational</p><h3 class="stack-item__name">PostgreSQL</h3></div><p class="stack-item__desc">Data integrity and auditable records, by design.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">NoSQL</p><h3 class="stack-item__name">MongoDB</h3></div><p class="stack-item__desc">Flexible storage for high-frequency, semi-structured data.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">Interfaces</p><h3 class="stack-item__name">REST APIs</h3></div><p class="stack-item__desc">Clean, secure and documented — with Swagger as the audit trail.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">Applied AI</p><h3 class="stack-item__name">AI Integration</h3></div><p class="stack-item__desc">OpenAI and other LLMs wired into production-ready systems.</p></article>
+                    <article class="stack-item"><div><p class="stack-item__type">Security</p><h3 class="stack-item__name">Auth &amp; Security</h3></div><p class="stack-item__desc">JWT, bcrypt and middleware for secure authentication flows.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- MANIFESTO -->
+        <section class="manifesto">
+            <div class="container">
+                <p class="manifesto__text" data-words>I noticed the same flaw in companies and public institutions alike: systems with real potential, running on infrastructure that's slow, opaque, or impossible to trust. I exist to fix that — one auditable, well-engineered system at a time.</p>
+                <p class="manifesto__foot" data-enter>— Hélio Levi</p>
+
+                <div class="manifesto__areas">
+                    <div class="area" data-enter>
+                        <h3 class="area__title">Public administration &amp; mandates</h3>
+                        <p class="area__text">In Maranhão and beyond, replacing guesswork with auditable, real-time data systems.</p>
+                    </div>
+                    <div class="area" data-enter>
+                        <h3 class="area__title">Operational efficiency</h3>
+                        <p class="area__text">Automation that removes repetitive work and gives lean teams their hours back.</p>
+                    </div>
+                    <div class="area" data-enter>
+                        <h3 class="area__title">Data integrity</h3>
+                        <p class="area__text">Systems where every decision traces back to a documented, trustworthy source.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MORE PROJECTS -->
+        <section class="section" id="more" style="padding-top:0">
+            <div class="container">
+                <header class="section__head" data-enter>
+                    <h2 class="section__title">More projects</h2>
+                </header>
+                <div class="cards">
+                    <article class="card" data-enter>
+                        <div class="card__media"><img src="./assets/img/barbershop-ai.png" alt="Barbershop AI Assistant screenshot" width="1200" height="750" loading="lazy"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">Barbershop AI Assistant</h3>
+                            <p class="card__text">An AI assistant that automates appointment scheduling, customer questions and service management with natural language.</p>
+                            <div class="tag-list"><span class="tag">JavaScript</span><span class="tag">OpenAI</span><span class="tag">Node.js</span></div>
+                            <a class="button button--small" href="https://github.com/heliolevi/assistencia-ia" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </article>
+                    <article class="card" data-enter>
+                        <div class="card__media"><img src="./assets/img/payments-api.png" alt="Payments API screenshot" width="1200" height="750" loading="lazy"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">Payments API</h3>
+                            <p class="card__text">A high-performance Node.js API for secure financial transactions, digital wallets and multiple payment gateways.</p>
+                            <div class="tag-list"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
+                            <a class="button button--small" href="https://github.com/heliolevi/API-pagamentos" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </article>
+                    <article class="card" data-enter>
+                        <div class="card__media"><img src="./assets/img/payments-ai.png" alt="Payments AI dashboard screenshot" width="1200" height="750" loading="lazy"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">Payments AI</h3>
+                            <p class="card__text">Financial analysis and fraud detection that surfaces suspicious patterns and real-time transaction insight.</p>
+                            <div class="tag-list"><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Express</span></div>
+                            <a class="button button--small" href="https://github.com/heliolevi/financas-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="contact__title" data-enter>Let's build something that matters.</h2>
+                <a class="contact__mail" href="mailto:hlevi200730@gmail.com" data-enter>hlevi200730@gmail.com</a>
+                <div class="button-row" data-enter>
+                    <a class="button" href="https://github.com/heliolevi" target="_blank" rel="noopener noreferrer"><img src="./assets/github.png" alt="" width="20" height="20">GitHub</a>
+                    <a class="button" href="https://www.linkedin.com/in/hélio-levi-morias-vieira-472918347/" target="_blank" rel="noopener noreferrer"><img src="./assets/linkedin.png" alt="" width="20" height="20">LinkedIn</a>
+                    <a class="button" href="https://www.instagram.com/helio_levi/" target="_blank" rel="noopener noreferrer"><img src="./assets/instagram.png" alt="" width="20" height="20">Instagram</a>
+                </div>
+                <p class="contact__note" data-enter>Open to back-end engineering and strategic technology consulting — including public administration and political mandates in Maranhão.</p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>© 2025 Developed by Hélio Levi. All rights reserved.</p>
+        <div class="container footer__inner">
+            <p>© 2026 Hélio Levi. All rights reserved.</p>
+            <nav class="footer__links" aria-label="Footer"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="#top">Back to top</a></nav>
+        </div>
     </footer>
-    <script src="./js/interactive.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+    <script src="./js/app.js" defer></script>
 </body>
 </html>
